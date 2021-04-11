@@ -1,0 +1,446 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/** Globales **/
+.contenedor {
+    width: 90%;
+    /** max-width: 120rem; = 1200px; **/
+    margin: 0 auto;
+}
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+
+/** Utilidades **/
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.centrar-texto {
+    text-align: center;
+}
+.d-block {
+    display: block;
+}
+.contenido-centrado {
+    max-width: 800px;
+}
+/** Botones **/
+.boton {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+.boton-amarillo {
+    background-color: #E08709;
+}
+.boton-amarillo:hover{
+    background-color: #f08e04;
+}
+
+/** Cabezera **/
+.sitio-cabezera {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+.sitio-cabezera.inicio {
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/bg-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.contenido-cabezera {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+.contenido-cabezera h2 {
+    color: #fff;
+    max-width: 60rem;
+}
+.logo{
+    color: #1f386e;
+    margin-right: 10px;
+}
+.logo h1{
+    margin: 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 3.3rem;
+}
+@media (min-width: 768px) {
+    .logo h1{
+        font-size: 3.8rem;
+    }
+}
+.logo span{
+    font-weight: 700;
+}
+.cabezera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90px;
+    padding: 0 5%;
+    z-index: 50;
+    top: 0;
+    background: #fff none repeat scroll 0% 0%;
+    border-color: rgba(231, 231, 231, 0);
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    position: fixed;
+    right: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+.enlace-whatsapp{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+.enlace-whatsapp img{
+    width: 32px;
+    height: 32px;
+}
+.enlace-whatsapp p{
+    font-size: 1.6rem;
+    margin: 0px;
+    color: #1f386e;
+    font-weight: 700;
+}
+/** Navegacion **/
+.menu{
+   display: none;
+}
+.navegacion a {
+    color: #1f386e;
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+    transition:  all 300ms;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.navegacion a:hover {
+    color: #ce2a36;
+}
+.enlace-activo{
+    color: #ce2a36 !important;
+}
+@media (min-width: 768px) {
+    .menu{
+        width: 60%;
+        display: block;
+    }
+    .navegacion {
+       display: flex;
+       list-style: none;
+       justify-content: flex-end;
+       gap: 40px;
+       margin: 0px;
+    }
+}
+/** Mobil Menu **/
+.navegacion-mobil {
+    list-style: none;
+    width: 100vw;
+    height: 100vh;
+    background: #1f386e;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    left: 0;
+    z-index: 20;
+    padding: 0px;
+    display: none;
+    margin: 0;
+}
+.mostrar-navegacion{
+    display: block;
+}
+.mobil-menu{
+    display: block;
+}
+.navegacion-mobil li{
+    margin-top: 30px;
+}
+.navegacion-mobil a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+    transition: all 300ms;
+    font-weight: 700;
+}
+.navegacion-mobil a:hover{
+    color: #ce2a36 ;
+}
+.mobil-btn i{
+    font-size: 30px;
+    color: #1f386e;
+    display: block;
+}
+@media (min-width: 768px) {
+    .mobil-menu{
+        display: none;
+    }
+}
+/** Iconos Nosotros **/
+@media (min-width: 768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.icono {
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+.icono h3 {
+    text-transform: uppercase;
+}
+/** Direccion **/
+.contenedor-direccion {
+    width: 90%;
+    margin: 0px auto;
+}
+/** Contacto Inicio **/
+.imagen-contacto {
+    background-image: url(../images/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+.contenido-contacto {
+    flex: 0 0 95%;
+    color: #fff;
+}
+.contenido-contacto p {
+    font-size: 1.8rem;
+}
+/** Sección Inferior **/
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion-inferior .blog {
+        flex-basis: 60%;
+    }
+    .seccion-inferior .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    }
+}
+.entrada-blog {
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+@media (min-width: 768px) {
+    .entrada-blog .imagen {
+        flex-basis: 40%;
+    }
+    .entrada-blog .texto-entrada {
+        flex-basis: calc(60% - 3rem);
+    }
+}
+.texto-entrada a {
+    color: #000;
+    text-decoration: none;
+}
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.4;
+}
+.texto-entrada h4::after {
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71b100;
+    margin-top: 1rem;
+}
+.texto-entrada span {
+    color: #E08709;
+}
+/** Footer **/
+.sitio-footer {
+    background-color: #1f386e;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.contenedor-footer i{
+    font-size: 2.4rem;
+    color: rgba(255,255,255,0.6);
+    transition: all 300ms;
+}
+.contenedor-footer i:hover{
+    color: #fff;
+}
+.copyright {
+    margin: 0;
+    color: #fff;
+    font-size: 1.6rem;
+}
+/** Nosotros **/
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+/** Anuncio **/
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** Contacto **/
+.contacto p {
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+legend {
+    font-size: 2rem;
+    color: #4f4f4f;
+}
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+input[type="radio"]{
+    width: auto;
+    margin: 0;
+}
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+textarea {
+    height: 20rem;
+}
+.forma-contacto {
+    max-width:30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/** Proyectos **/
+.contenedor-proyectos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+.contenedor-dep{
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    overflow: hidden;
+}
+.contenedor-dep a{
+    display: none;
+}
+.contenedor-dep a:first-child{
+    display: block;
+}
+.contenedor-proyectos img{
+    max-width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.contenedor-proyectos img:hover{
+    transform: scale(1.5) rotate(30deg);
+    transition: 0.5s;
+}
+@media (min-width: 768px) {
+    .contenedor-proyectos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 15px;
+    }
+}
