@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
+    scroll-behavior: smooth;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -34,6 +35,7 @@ h4 {
 .seccion {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding-top: 90px;
 }
 .fw-300 {
     font-weight: 300;
